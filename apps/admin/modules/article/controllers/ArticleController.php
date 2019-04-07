@@ -70,7 +70,7 @@ class ArticleController extends BackendController
     {
         $input = Input::only('id', 'title', 'content');
         
-        $data['arId'] = $input['id'];
+        $data['arid'] = $input['id'];
         $data['title'] = $input['title'];
         $data['content'] = $input['content'];
 

@@ -70,7 +70,7 @@ class VideoController extends BackendController
     {
         $input = Input::only('id', 'title', 'link');
         
-        $data['vId'] = $input['id'];
+        $data['vid'] = $input['id'];
         $data['title'] = $input['title'];
         $data['link'] = $input['link'];
 

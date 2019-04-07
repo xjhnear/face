@@ -34,13 +34,13 @@ class ArticleController extends BackendController
         $pager = Paginator::make(array(),$total,$pageSize);
         $pager->appends($search);
         $data['pagelinks'] = $pager->links();
-        return $this->display('article/article-list', $data);
+        return $this->display('article-list', $data);
     }
 
     public function getAdd()
     {
         $data = array();
-        return $this->display('article/article-add', $data);
+        return $this->display('article-add', $data);
     }
     
     public function postAdd()
@@ -63,7 +63,7 @@ class ArticleController extends BackendController
     {
         $data = array();
         $data['data'] = Article::getInfo($id);
-        return $this->display('article/article-edit', $data);
+        return $this->display('article-edit', $data);
     }
 
     public function postEdit()

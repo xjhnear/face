@@ -28,9 +28,9 @@ class ArticleController extends BackendController
         $pageSize = 10;
 		$search = array();
 
-        $data['datalist'] = User::getList($search,$pageIndex,$pageSize);
+        $data['datalist'] = Article::getList($pageIndex,$pageSize);
         $data['search'] = $search;
-        $total = Article::getCount($search);
+        $total = Article::getCount();
         $pager = Paginator::make(array(),$total,$pageSize);
         $pager->appends($search);
         $data['pagelinks'] = $pager->links();

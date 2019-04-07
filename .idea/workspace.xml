@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdd5997c-124e-495e-be5f-896b5a793c3c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/apps/admin/modules/article/controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/modules/article/controllers/ArticleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/admin/modules/article/views/article-edit.twig" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/modules/article/views/article-edit.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/admin/modules/video/controllers/VideoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/modules/video/controllers/VideoController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/admin/modules/video/views/video-edit.twig" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/modules/video/views/video-edit.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/modules/article/views/article-list.twig" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/modules/article/views/article-list.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/admin/modules/video/views/video-list.twig" beforeDir="false" afterPath="$PROJECT_DIR$/apps/admin/modules/video/views/video-list.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,15 +35,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbtable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/dbtable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="66" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Article.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/Model/Article.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,15 +55,6 @@
               <folding>
                 <element signature="e#232#270#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/apps/admin/modules/video/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -109,14 +89,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArticleController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/apps/admin/modules/article/controllers/ArticleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+            <state relative-caret-position="318">
+              <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
               <folding>
                 <element signature="e#135#174#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="article-list.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/apps/admin/modules/article/views/article-list.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="82" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="video-list.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/apps/admin/modules/video/views/video-list.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -148,11 +146,9 @@
         <option value="$PROJECT_DIR$/apps/admin/modules/article/routes.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/article/config.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/article/auth_menu.php" />
-        <option value="$PROJECT_DIR$/apps/admin/modules/article/views/article-list.twig" />
         <option value="$PROJECT_DIR$/apps/admin/modules/article/views/article-add.twig" />
         <option value="$PROJECT_DIR$/services/Youxiduo/User/Model/Article.php" />
         <option value="$PROJECT_DIR$/services/Youxiduo/User/Model/Video.php" />
-        <option value="$PROJECT_DIR$/apps/admin/modules/video/views/video-list.twig" />
         <option value="$PROJECT_DIR$/apps/admin/modules/video/views/video-add.twig" />
         <option value="$PROJECT_DIR$/apps/admin/modules/video/routes.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/video/config.php" />
@@ -162,6 +158,8 @@
         <option value="$PROJECT_DIR$/apps/admin/modules/article/views/article-edit.twig" />
         <option value="$PROJECT_DIR$/apps/admin/modules/video/controllers/VideoController.php" />
         <option value="$PROJECT_DIR$/apps/admin/modules/article/controllers/ArticleController.php" />
+        <option value="$PROJECT_DIR$/apps/admin/modules/article/views/article-list.twig" />
+        <option value="$PROJECT_DIR$/apps/admin/modules/video/views/video-list.twig" />
       </list>
     </option>
   </component>
@@ -404,12 +402,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554618147112</updated>
-      <workItem from="1554618149524" duration="7037000" />
+      <workItem from="1554618149524" duration="7118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7037000" />
+    <option name="totallyTimeSpent" value="7118000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -576,13 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/admin/modules/article/views/article-list.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="67" selection-start-line="13" selection-start-column="60" selection-end-line="13" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/Youxiduo/User/UserService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2">
@@ -626,13 +617,6 @@
           <folding>
             <element signature="e#43#82#0#PHP" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/apps/admin/modules/video/views/video-list.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -717,11 +701,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/apps/admin/modules/article/controllers/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="72" column="18" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="18" />
+        <state relative-caret-position="318">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
           <folding>
             <element signature="e#135#174#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/admin/modules/article/views/article-list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="82" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/apps/admin/modules/video/views/video-list.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
         </state>
       </provider>
     </entry>

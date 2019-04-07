@@ -4,12 +4,12 @@
     <div class="span12">
         <div class="box">
             <div class="box-title">
-                <h3><i class="icon-edit"></i>编辑文章</h3>
+                <h3><i class="icon-edit"></i>编辑视频</h3>
             </div>
 
             <div class="box-content">
-                <form id="gift-info-form" action="<!--{{url('/article/article/edit')}}-->" method="POST" class='form-horizontal form-validate' enctype="multipart/form-data">
-                    <input name="id" type="hidden" value="<!--{{data.arId}}-->"  />
+                <form id="gift-info-form" action="<!--{{url('/video/video/edit')}}-->" method="POST" class='form-horizontal form-validate' enctype="multipart/form-data">
+                    <input name="id" type="hidden" value="<!--{{data.vId}}-->"  />
                     <div class="control-group" >
                         <label class="control-label">标题:</label>
                         <div class="controls">
@@ -17,12 +17,12 @@
                         </div>
                     </div>
 
-					<div class="control-group">
-						<label for="textfield" class="control-label">内容</label>
-						<div class="controls">
-							<script id="intro" name="content" type="text/plain"><!--{{ data.content }}--></script>
-						</div>
-					</div>
+                    <div class="control-group" >
+                        <label class="control-label">链接:</label>
+                        <div class="controls">
+                            <input type="text" name="link" class="input-large" value="<!--{{data.link  }}-->" />
+                        </div>
+                    </div>
 		
 			        <div class="form-actions">
 			            <button type="submit" class="btn btn-primary"><i class="icon-ok"></i>保存</button>
@@ -48,16 +48,5 @@
 <script src="<!--{{asset('/static/js/autosuggest_v2.1.3/js/bsn.AutoSuggest_2.1.3_comp.js ')}}-->"></script>
 <script src="<!--{{asset('/static/js/MyHelp.js')}}-->"></script>
 <script>
-	$(function(){
-		$('input.datetimepicker').datetimepicker({format:'Y-m-d H:i',lang:'ch','minDate':''});
-		UE.getEditor('intro',{initialFrameHeight:100});
-		$('input').iCheck({
-			checkboxClass: 'icheckbox_square-orange',
-			radioClass: 'iradio_square-orange',
-			increaseArea: '20%' // optional
-		});
-		$('.switchbox').bootstrapSwitch();
-	});
-	    
 </script>
 <!--{%endblock%}-->

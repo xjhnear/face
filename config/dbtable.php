@@ -7,6 +7,7 @@ $v4_tables = array(
 
     'youxiduo_user_model_user'=>array('db'=>'www','table'=>'user'),
     'youxiduo_user_model_article'=>array('db'=>'www','table'=>'article'),
+    'youxiduo_user_model_video'=>array('db'=>'www','table'=>'video'),
     'youxiduo_user_model_usermobile'=>array('db'=>'www','table'=>'user_mobile'),
     'youxiduo_user_model_feedback'=>array('db'=>'www','table'=>'feedback'),
 

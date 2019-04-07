@@ -24,20 +24,16 @@ class ArticleController extends BackendController
     public function getList()
     {
 		$data = array();
-		$page = Input::get('page',1);	
-		$pagesize = 10;
+        $pageIndex = Input::get('page',1);
+        $pageSize = 10;
 		$search = array();
-		
-		$result = Article::getList($page,$pagesize);
-		$totalcount = $result['totalcount'];
-		$data['datalist'] = $result['data'];
 
-		$pager = Paginator::make(array(),$totalcount,$pagesize);
-		$pager->appends($search);
-		$data['search'] = $search;
-		$data['pagelinks'] = $pager->links();
-		$data['totalcount'] = $totalcount;
-		
+        $data['datalist'] = User::getList($search,$pageIndex,$pageSize);
+        $data['search'] = $search;
+        $total = Article::getCount($search);
+        $pager = Paginator::make(array(),$total,$pageSize);
+        $pager->appends($search);
+        $data['pagelinks'] = $pager->links();
         return $this->display('article/article-list', $data);
     }
 
@@ -66,8 +62,7 @@ class ArticleController extends BackendController
     public function getEdit($id)
     {
         $data = array();
-        $result = Article::getInfo($id);
-        $data['data'] = $result['data'];
+        $data['data'] = Article::getInfo($id);
         return $this->display('article/article-edit', $data);
     }
 

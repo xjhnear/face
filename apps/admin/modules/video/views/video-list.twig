@@ -31,7 +31,8 @@
                     	<td><!--{{item.vid}}--></td>
                         <td><!--{{item.title}}--></td>
                         <td>
-                            <a href="<!--{{url('video/video/edit',{id:item.vid})}}-->" class="btn btn-primary">编辑</a>
+                            <a href="<!--{{url('video/video/edit',{id:item.vid})}}-->" class="btn btn-primary">编辑</a> |
+                            <a href="<!--{{url('video/video/commentlist',{pid:item.vid})}}-->" class="btn btn-primary">查看评论</a>
                         </td>
                     </tr>
                     <!--{%endfor%}-->

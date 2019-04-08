@@ -35,4 +35,22 @@ final class Comment extends Model implements IModel
 		return $res ? true : false;
 	}
 
+	public static function getList($search,$pageIndex=1,$pageSize=20)
+	{
+		$tb = self::db();
+		if(isset($search['content']) && !empty($search['content'])) $tb = $tb->where('content','like','%'.$search['content'].'%');
+		if(isset($search['type']) && !empty($search['type'])) $tb = $tb->where('type','=',$search['type']);
+		if(isset($search['pid']) && !empty($search['pid'])) $tb = $tb->where('pid','=',$search['pid']);
+		return $tb->orderBy('created_at','desc')->forPage($pageIndex,$pageSize)->get();
+	}
+
+	public static function getCount($search)
+	{
+		$tb = self::db();
+		if(isset($search['content']) && !empty($search['content'])) $tb = $tb->where('content','like','%'.$search['content'].'%');
+		if(isset($search['type']) && !empty($search['type'])) $tb = $tb->where('type','=',$search['type']);
+		if(isset($search['pid']) && !empty($search['pid'])) $tb = $tb->where('pid','=',$search['pid']);
+		return $tb->count();
+	}
+
 }

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Paginator;
 use Youxiduo\Helper\MyHelp;
 use Youxiduo\User\Model\Article;
+use Youxiduo\User\Model\Comment;
 
 class ArticleController extends BackendController
 {
@@ -83,5 +84,20 @@ class ArticleController extends BackendController
         }
     }
 
-    
+    public function getCommentlist()
+    {
+        $data = array();
+        $pageIndex = Input::get('page',1);
+        $pageSize = 10;
+        $search = Input::only('pid','content');
+        $search['type'] = 1;
+
+        $data['datalist'] = Comment::getList($search,$pageIndex,$pageSize);
+        $data['search'] = $search;
+        $total = Comment::getCount($search);
+        $pager = Paginator::make(array(),$total,$pageSize);
+        $pager->appends($search);
+        $data['pagelinks'] = $pager->links();
+        return $this->display('comment-list', $data);
+    }
 }

@@ -26,4 +26,17 @@ class ArticleController extends BaseController
 		}
 	}
 
+	public function comment()
+	{
+		$pid = Input::get('pid');
+		$content = Input::get('content');
+		$urid = Input::get('urid',0);
+		$result = UserService::saveComment($urid,1,$pid,$content);
+		if($result['result']){
+			return $this->success();
+		}else{
+			return $this->fail(201,$result['msg']);
+		}
+	}
+
 }

@@ -13,6 +13,7 @@ namespace Youxiduo\User;
 use Illuminate\Support\Facades\Config;
 use Youxiduo\Base\BaseService;
 use Youxiduo\User\Model\Feedback;
+use Youxiduo\User\Model\Comment;
 use Youxiduo\User\Model\User;
 use Youxiduo\User\Model\UserMobile;
 use Youxiduo\User\UploaderService;
@@ -235,6 +236,16 @@ class UserService extends BaseService
 		$array = $upload->upload($string_video_content,$new_videoname);
 
 		return $array;
+	}
+
+	public static function saveComment($urid,$type,$pid,$content)
+	{
+		$res = Comment::saveComment($urid,$type,$pid,$content);
+		if($res){
+			return array('result'=>true);
+		}else{
+			return array('result'=>false,'msg'=>"评论提交失败");
+		}
 	}
 
 }

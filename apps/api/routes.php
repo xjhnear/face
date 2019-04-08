@@ -41,8 +41,10 @@ Route::any('user/identify',array('uses'=>'UserController@identify'));
 Route::any('user/identifyrefresh',array('uses'=>'UserController@identifyRefresh'));
 //文章列表
 Route::any('article/getlist',array('uses'=>'ArticleController@getlist'));
+Route::any('article/comment{symbol}',array('before'=>'uri_verify','uses'=>'ArticleController@comment'));
 //视频列表
 Route::any('video/getlist',array('uses'=>'VideoController@getlist'));
+Route::any('video/comment{symbol}',array('before'=>'uri_verify','uses'=>'VideoController@comment'));
 
 //获取验证码
 Route::any('sms/verify{symbol}',array('before'=>'uri_verify','uses'=>'UserController@smsVerify'));

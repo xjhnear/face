@@ -64,7 +64,8 @@ class LoginController extends Controller
 	public function getLogout()
 	{
 		$cookie = AuthService::doLogout();
-		return $this->redirect('login')->withCookie($cookie);
+//		return $this->redirect('login')->withCookie($cookie);
+        return $this->redirect('login');
 	}
 	
     /**

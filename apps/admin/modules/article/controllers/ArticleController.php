@@ -49,6 +49,7 @@ class ArticleController extends BackendController
         $input = Input::only('title', 'content');
 
         $data['title'] = $input['title'];
+        $data['summary'] = $input['summary'];
         $data['content'] = $input['content'];
         
         $result = Article::save($data);
@@ -73,6 +74,7 @@ class ArticleController extends BackendController
         
         $data['arid'] = $input['id'];
         $data['title'] = $input['title'];
+        $data['summary'] = $input['summary'];
         $data['content'] = $input['content'];
 
         $result = Article::save($data);

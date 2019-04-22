@@ -49,6 +49,7 @@ class VideoController extends BackendController
         $input = Input::only('title', 'link');
 
         $data['title'] = $input['title'];
+        $data['summary'] = $input['summary'];
         $data['link'] = $input['link'];
         
         $result = Video::save($data);
@@ -73,6 +74,7 @@ class VideoController extends BackendController
         
         $data['vid'] = $input['id'];
         $data['title'] = $input['title'];
+        $data['summary'] = $input['summary'];
         $data['link'] = $input['link'];
 
         $result = Video::save($data);

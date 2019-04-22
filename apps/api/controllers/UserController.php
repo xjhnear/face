@@ -56,7 +56,7 @@ class UserController extends BaseController
 	{
 		$mobile = Input::get('mobile');
 		$password = Input::get('password');
-		$verifycode = Input::get('verifycode');
+//		$verifycode = Input::get('verifycode');
 		$type = Input::get('type',0);
 		$urid = Input::get('urid',0);
 		if(!$mobile){
@@ -65,11 +65,11 @@ class UserController extends BaseController
 		if(!$password){
 			return $this->fail(202,'密码不能为空');
 		}
-		if(!$verifycode){
-			return $this->fail(202,'验证码不能为空');
-		}
-		$result = UserService::verifyPhoneVerifyCode($mobile, $type, $verifycode);
-		if($result['result']){
+//		if(!$verifycode){
+//			return $this->fail(202,'验证码不能为空');
+//		}
+//		$result = UserService::verifyPhoneVerifyCode($mobile, $type, $verifycode);
+//		if($result['result']){
 			switch ($type) {
 				case 0:
 					//注册
@@ -136,9 +136,9 @@ class UserController extends BaseController
 					return $this->fail(202,'参数异常');
 					break;
 			}
-		}else{
-			return $this->fail(201,$result['msg']);
-		}
+//		}else{
+//			return $this->fail(201,$result['msg']);
+//		}
 
 	}
 

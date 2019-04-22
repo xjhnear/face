@@ -20,7 +20,7 @@ class ArticleController extends BaseController
 
 		$result = ArticleService::getArticleList($pageIndex,$pageSize);
 		if($result['result']){
-			return $this->success($result['data']);
+			return $this->success(array('result'=>$result['data']));
 		}else{
 			return $this->fail(201,$result['msg']);
 		}

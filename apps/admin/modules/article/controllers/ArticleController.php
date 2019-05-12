@@ -46,7 +46,7 @@ class ArticleController extends BackendController
     
     public function postAdd()
     {
-        $input = Input::only('title', 'content');
+        $input = Input::only('title', 'content', 'summary');
 
         $data['title'] = $input['title'];
         $data['summary'] = $input['summary'];
@@ -70,7 +70,7 @@ class ArticleController extends BackendController
 
     public function postEdit()
     {
-        $input = Input::only('id', 'title', 'content');
+        $input = Input::only('id', 'title', 'content', 'summary');
         
         $data['arid'] = $input['id'];
         $data['title'] = $input['title'];

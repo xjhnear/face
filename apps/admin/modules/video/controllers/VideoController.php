@@ -46,7 +46,7 @@ class VideoController extends BackendController
     
     public function postAdd()
     {
-        $input = Input::only('title', 'link');
+        $input = Input::only('title', 'link', 'summary');
 
         $data['title'] = $input['title'];
         $data['summary'] = $input['summary'];
@@ -70,7 +70,7 @@ class VideoController extends BackendController
 
     public function postEdit()
     {
-        $input = Input::only('id', 'title', 'link');
+        $input = Input::only('id', 'title', 'link', 'summary');
         
         $data['vid'] = $input['id'];
         $data['title'] = $input['title'];

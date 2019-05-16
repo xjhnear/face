@@ -65,7 +65,7 @@ class BaseController extends Controller
 		if(strpos($img,'http')===0) return $img;
 		$last = '';
 		//if(strpos($img,'avatar')!==false) $last = '?time=' . time();
-		return 'http://img.youxiduo.com' . $img . $last;
+		return 'http://img.52applepie.com' . $img . $last;
 	}
 	
 	protected function getComVersion()

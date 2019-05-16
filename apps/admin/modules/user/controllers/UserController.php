@@ -4,6 +4,7 @@ namespace modules\user\controllers;
 use Yxd\Modules\Core\BackendController;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Paginator;
+use Illuminate\Support\Facades\Config;
 use Youxiduo\Helper\MyHelp;
 use Youxiduo\User\Model\User;
 
@@ -40,6 +41,7 @@ class UserController extends BackendController
 	{
 		$data = array();
 		$data['info'] = User::getInfo($urid);
+		$data['info']['head_img'] = Config::get('app.img_url').$data['info']['head_img'];
 		return $this->display('user_info',$data);
 	}
 	

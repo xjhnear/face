@@ -1,10 +1,5 @@
 .*
+.*/*
+/web/userdirs/*
 !.gitignore
-application/configs/
-/application/configs
-/application/configs/application.ini
-/public/.htaccess
 *.bak
-go-pear.phar
-phpinfo.php
-/application/data/imkeys

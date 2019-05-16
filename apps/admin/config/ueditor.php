@@ -7,6 +7,6 @@ return array(
     'imageCompressEnable'=>false,
     'imageCompressBorder'=>'1000',
     'imageInsertAlign'=>'none',
-    'imageUrlPrefix'=>'http://img.youxiduo.com',
+    'imageUrlPrefix'=>'http://img.52applepie.com',
     'imagePathFormat'=>'upload',    
 );

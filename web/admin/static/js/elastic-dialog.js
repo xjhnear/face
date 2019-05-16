@@ -152,7 +152,7 @@ var selectdialog = function(options){
                         val_=val[Field];
                          if(typeof(settings.tbodytd[index]) != 'undefined'){
                                if(settings.tbodytd[index] == 'img'){
-                                   val_="<img  src='http://img.youxiduo.com/"+val_+"'  width='30' height='40' >";
+                                   val_="<img  src='http://img.52applepie.com/"+val_+"'  width='30' height='40' >";
                                }
                           }  
                           strhtml+=$.inArray(Field,needinfo) > -1 ? '<td id="'+Field+'_'+val[settings.primarykey]+'" data-value="'+val[Field]+'">'+val_+'</td>' :'<td>'+val_+'</td>'; 

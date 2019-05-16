@@ -167,7 +167,7 @@ class ForumUtility
 	    foreach($message as $val){
 
 			if($val['img']){
-				$format_message .= '<p class="topic-img"><img src="' . 'http://img.youxiduo.com' . $val['img'] . '" /></p>';
+				$format_message .= '<p class="topic-img"><img src="' . 'http://img.52applepie.com' . $val['img'] . '" /></p>';
 			}	
 			if($val['text']){
 				$format_message .= '<p class="topic-text">' . $val['text'] . '</p>';

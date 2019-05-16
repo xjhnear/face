@@ -206,8 +206,8 @@ class MyHelp
         $titlePic ="";
         if($img) {
             if (!isset($dir)) {
-                $dir = '/runtime/userdirs/' . date('Y') . '/' . date('m') . '/';
-                $path = storage_path() . $dir;
+                $dir = '/userdirs/' . date('Y') . '/' . date('m') . '/';
+                $path = storage_path() .'/runtime'. $dir;
             }
             self::createFolder($path);
             $file = $img;
@@ -224,8 +224,8 @@ class MyHelp
         $titlePic ="";
         if($img) {
             if (!isset($dir)) {
-                $dir = '/runtime/userdirs/'.$dir_.'/' . date('Y') . '/' . date('m') . '/';
-                $path = base_path() . $dir;
+                $dir = '/userdirs/'.$dir_.'/' . date('Y') . '/' . date('m') . '/';
+                $path = base_path() .'/runtime'. $dir;
             }
             self::createFolder($path);
             $file = $img;

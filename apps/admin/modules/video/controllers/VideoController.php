@@ -10,6 +10,7 @@ namespace modules\video\controllers;
 use Yxd\Modules\Core\BackendController;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Paginator;
+use Illuminate\Support\Facades\Config;
 use Youxiduo\Helper\MyHelp;
 use Youxiduo\User\Model\Video;
 use Youxiduo\User\Model\Comment;

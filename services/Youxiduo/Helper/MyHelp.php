@@ -206,7 +206,7 @@ class MyHelp
         $titlePic ="";
         if($img) {
             if (!isset($dir)) {
-                $dir = 'userdirs/' . date('Y') . '/' . date('m') . '/';
+                $dir = '/userdirs/' . date('Y') . '/' . date('m') . '/';
                 $path = storage_path() . $dir;
             }
             self::createFolder($path);
@@ -224,7 +224,7 @@ class MyHelp
         $titlePic ="";
         if($img) {
             if (!isset($dir)) {
-                $dir = 'userdirs/'.$dir_.'/' . date('Y') . '/' . date('m') . '/';
+                $dir = '/userdirs/'.$dir_.'/' . date('Y') . '/' . date('m') . '/';
                 $path = base_path() . $dir;
             }
             self::createFolder($path);

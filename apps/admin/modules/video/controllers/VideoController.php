@@ -69,6 +69,7 @@ class VideoController extends BackendController
     {
         $data = array();
         $data['data'] = Video::getInfo($id);
+        $data['data']['img'] = Config::get('app.img_url').$data['data']['img'];
         return $this->display('video-edit', $data);
     }
 

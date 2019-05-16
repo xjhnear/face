@@ -69,6 +69,7 @@ class ArticleController extends BackendController
     {
         $data = array();
         $data['data'] = Article::getInfo($id);
+        $data['data']['img'] = Config::get('app.img_url').$data['data']['img'];
         return $this->display('article-edit', $data);
     }
 

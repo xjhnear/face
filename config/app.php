@@ -48,9 +48,9 @@ return array(
 	*/
 
 	'url' => '',
-    'img_url' => 'http://test.img.youxiduo.com',
-    'image_url' => 'http://test.img.youxiduo.com',
-	'test_image_url' => 'http://test.img.youxiduo.com',
+    'img_url' => 'http://img.52applepie.com',
+    'image_url' => 'http://img.52applepie.com',
+	'test_image_url' => 'http://img.52applepie.com',
     'image_activity_url' => 'http://action.api.youxiduo.com',
     'game_icon_path' => dirname(dirname(dirname(__DIR__))).'/yxd_www/bestofbest',
     'v4my_img_url' => 'http://112.124.121.34:58080/module_file_system/file/',

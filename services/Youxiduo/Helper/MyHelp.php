@@ -227,7 +227,6 @@ class MyHelp
                 $dir = '/userdirs/'.$dir_.'/' . date('Y') . '/' . date('m') . '/';
                 $path = base_path() . $dir;
             }
-            print_r($path);exit;
             self::createFolder($path);
             $file = $img;
             $new_filename = date('YmdHis') . str_random(4);

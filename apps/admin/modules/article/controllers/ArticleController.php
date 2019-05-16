@@ -46,12 +46,16 @@ class ArticleController extends BackendController
     
     public function postAdd()
     {
-        $input = Input::only('title', 'content', 'summary');
+        $input = Input::only('title', 'content', 'summary','img');
 
         $data['title'] = $input['title'];
         $data['summary'] = $input['summary'];
         $data['content'] = $input['content'];
-        
+        if(Input::hasFile('img')){
+            $img = MyHelp::save_img_no_url(Input::file('img'),'article_img');
+            $data['img'] = $img;
+        }
+
         $result = Article::save($data);
         
         if ($result) {
@@ -70,12 +74,17 @@ class ArticleController extends BackendController
 
     public function postEdit()
     {
-        $input = Input::only('id', 'title', 'content', 'summary');
+        $input = Input::only('id', 'title', 'content', 'summary','img','old_img');
         
         $data['arid'] = $input['id'];
         $data['title'] = $input['title'];
         $data['summary'] = $input['summary'];
         $data['content'] = $input['content'];
+        $img = $input['old_img'];unset($input['old_img']);
+        if(Input::hasFile('img')){
+            $img = MyHelp::save_img_no_url(Input::file('img'),'article_img');
+        }
+        $data['img'] = $img;
 
         $result = Article::save($data);
         

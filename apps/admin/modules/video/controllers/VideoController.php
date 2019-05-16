@@ -46,12 +46,16 @@ class VideoController extends BackendController
     
     public function postAdd()
     {
-        $input = Input::only('title', 'link', 'summary');
+        $input = Input::only('title', 'link', 'summary','img');
 
         $data['title'] = $input['title'];
         $data['summary'] = $input['summary'];
         $data['link'] = $input['link'];
-        
+        if(Input::hasFile('img')){
+            $img = MyHelp::save_img_no_url(Input::file('img'),'video_img');
+            $data['img'] = $img;
+        }
+
         $result = Video::save($data);
         
         if ($result) {
@@ -70,12 +74,17 @@ class VideoController extends BackendController
 
     public function postEdit()
     {
-        $input = Input::only('id', 'title', 'link', 'summary');
+        $input = Input::only('id', 'title', 'link', 'summary','img','old_img');
         
         $data['vid'] = $input['id'];
         $data['title'] = $input['title'];
         $data['summary'] = $input['summary'];
         $data['link'] = $input['link'];
+        $img = $input['old_img'];unset($input['old_img']);
+        if(Input::hasFile('img')){
+            $img = MyHelp::save_img_no_url(Input::file('img'),'video_img');
+        }
+        $data['img'] = $img;
 
         $result = Video::save($data);
         

@@ -10,7 +10,7 @@ return array(
     ),
     'extra_node'=>array(
         array('name'=>'全部文章管理模块','url'=>'article/*'),
-        array('name'=>'分类管理','url'=>'article/article/*'),
+        array('name'=>'分类管理','url'=>'article/group/*'),
         array('name'=>'文章管理','url'=>'article/article/*'),
     )
 );

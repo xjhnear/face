@@ -13,6 +13,7 @@ $v4_tables = array(
     'youxiduo_user_model_comment'=>array('db'=>'www','table'=>'comment'),
     'youxiduo_user_model_usermobile'=>array('db'=>'www','table'=>'user_mobile'),
     'youxiduo_user_model_feedback'=>array('db'=>'www','table'=>'feedback'),
+    'youxiduo_user_model_post'=>array('db'=>'www','table'=>'post'),
 
     'youxiduo_phone_model_phonebatch'=>array('db'=>'www','table'=>'phone_batch'),
     'youxiduo_phone_model_phonenumbers'=>array('db'=>'www','table'=>'phone_numbers')

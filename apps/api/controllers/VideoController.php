@@ -6,15 +6,13 @@ use Yxd\Services\UserFeedService;
 use Yxd\Services\RelationService;
 use Illuminate\Support\Facades\Input;
 use Youxiduo\User\VideoService;
+use Youxiduo\User\UserService;
 use Youxiduo\Helper\MyHelp;
 
 use PHPImageWorkshop\ImageWorkshop;
 
 class VideoController extends BaseController
 {
-
-
-
 
 	public function getlist()
 	{

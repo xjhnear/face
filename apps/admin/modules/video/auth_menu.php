@@ -5,10 +5,12 @@ return array(
     'module_icon'  => 'all',
     'default_url'=>'video/video/list',
     'child_menu' => array(
+        array('name'=>'分类管理','url'=>'article/group/list'),
         array('name'=>'视频管理','url'=>'video/video/list'),
     ),
     'extra_node'=>array(
         array('name'=>'全部视频管理模块','url'=>'video/*'),
+        array('name'=>'分类管理','url'=>'article/article/*'),
         array('name'=>'视频管理','url'=>'video/video/*'),
     )
 );

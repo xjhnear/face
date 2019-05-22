@@ -26,11 +26,13 @@ class PostService extends BaseService
 	{
 		if ($urid > 0) {
 			$post = Post::getList($pageIndex,$pageSize,$urid);
-			if($post){
-				return array('result'=>true,'data'=>$post);
-			}
+		} else {
+			$post = Post::getList($pageIndex,$pageSize);
 		}
-		return array('result'=>false,'msg'=>"用户不存在");
+		if($post){
+			return array('result'=>true,'data'=>$post);
+		}
+		return array('result'=>false,'msg'=>"暂无数据");
 	}
 
 	public static function save($urid,$title,$content)

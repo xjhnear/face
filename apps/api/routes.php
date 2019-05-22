@@ -47,7 +47,8 @@ Route::any('video/getlist',array('uses'=>'VideoController@getlist'));
 Route::any('video/comment{symbol}',array('before'=>'uri_verify','uses'=>'VideoController@comment'));
 
 //帖子列表
-Route::any('post/getlist',array('before'=>'uri_verify','uses'=>'PostController@getlist'));
+Route::any('post/getlist',array('uses'=>'PostController@getlist'));
+Route::any('post/getmylist',array('before'=>'uri_verify','uses'=>'PostController@getlist'));
 Route::any('post/add{symbol}',array('before'=>'uri_verify','uses'=>'PostController@add'));
 Route::any('post/comment{symbol}',array('before'=>'uri_verify','uses'=>'PostController@comment'));
 

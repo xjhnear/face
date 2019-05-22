@@ -18,6 +18,19 @@ class PostController extends BaseController
 	{
 		$pageIndex = Input::get('pageIndex',1);
 		$pageSize = Input::get('pageSize',20);
+
+		$result = PostService::getPostList(0,$pageIndex,$pageSize);
+		if($result['result']){
+			return $this->success(array('result'=>$result['data']));
+		}else{
+			return $this->fail(201,$result['msg']);
+		}
+	}
+
+	public function getmylist()
+	{
+		$pageIndex = Input::get('pageIndex',1);
+		$pageSize = Input::get('pageSize',20);
 		$urid = Input::get('urid',0);
 
 		$result = PostService::getPostList($urid,$pageIndex,$pageSize);

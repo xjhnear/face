@@ -40,15 +40,17 @@ Route::any('user/identify',array('uses'=>'UserController@identify'));
 //更新认证结果
 Route::any('user/identifyrefresh',array('uses'=>'UserController@identifyRefresh'));
 //文章列表
+Route::any('article/getgrouplist',array('uses'=>'ArticleController@getgrouplist'));
 Route::any('article/getlist',array('uses'=>'ArticleController@getlist'));
 Route::any('article/comment{symbol}',array('before'=>'uri_verify','uses'=>'ArticleController@comment'));
 //视频列表
+Route::any('video/getgrouplist',array('uses'=>'VideoController@getgrouplist'));
 Route::any('video/getlist',array('uses'=>'VideoController@getlist'));
 Route::any('video/comment{symbol}',array('before'=>'uri_verify','uses'=>'VideoController@comment'));
 
 //帖子列表
 Route::any('post/getlist',array('uses'=>'PostController@getlist'));
-Route::any('post/getmylist',array('before'=>'uri_verify','uses'=>'PostController@getlist'));
+Route::any('post/getmylist',array('before'=>'uri_verify','uses'=>'PostController@getmylist'));
 Route::any('post/add{symbol}',array('before'=>'uri_verify','uses'=>'PostController@add'));
 Route::any('post/comment{symbol}',array('before'=>'uri_verify','uses'=>'PostController@comment'));
 

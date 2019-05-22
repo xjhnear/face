@@ -27,9 +27,12 @@ final class Video extends Model implements IModel
 	}
 
 	//后台
-	public static function getList($pageIndex=1,$pageSize=20)
+	public static function getList($pageIndex=1,$pageSize=20,$gid=0)
 	{
 		$tb = self::db();
+		if ($gid > 0) {
+			$tb->where('gid','=',$gid);
+		}
 		return $tb->orderBy('created_at','desc')->forPage($pageIndex,$pageSize)->get();
 	}
 

@@ -22,13 +22,13 @@ use Illuminate\Support\Facades\DB;
 class VideoService extends BaseService
 {
 
-	public static function getVideoList($pageIndex=1,$pageSize=20)
+	public static function getVideoList($pageIndex=1,$pageSize=20,$gid=0)
 	{
-		$video = Video::getList($pageIndex,$pageSize);
+		$video = Video::getList($pageIndex,$pageSize,$gid);
 		if($video){
 			return array('result'=>true,'data'=>$video);
 		}
-		return array('result'=>false,'msg'=>"用户不存在");
+		return array('result'=>false,'msg'=>"暂无数据");
 	}
 
 }

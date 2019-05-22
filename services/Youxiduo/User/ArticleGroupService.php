@@ -12,21 +12,21 @@ namespace Youxiduo\User;
 
 use Illuminate\Support\Facades\Config;
 use Youxiduo\Base\BaseService;
-use Youxiduo\User\Model\Article;
+use Youxiduo\User\Model\ArticleGroup;
 use Youxiduo\User\UploaderService;
 use Youxiduo\Helper\Utility;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
 
 
-class ArticleService extends BaseService
+class ArticleGroupService extends BaseService
 {
 
-	public static function getArticleList($pageIndex=1,$pageSize=20,$gid=0)
+	public static function getArticleGroupList($pageIndex=1,$pageSize=20)
 	{
-		$article = Article::getList($pageIndex,$pageSize,$gid);
-		if($article){
-			return array('result'=>true,'data'=>$article);
+		$articlegroup = ArticleGroup::getList($pageIndex,$pageSize);
+		if($articlegroup){
+			return array('result'=>true,'data'=>$articlegroup);
 		}
 		return array('result'=>false,'msg'=>"暂无数据");
 	}

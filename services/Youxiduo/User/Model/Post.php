@@ -30,9 +30,13 @@ final class Post extends Model implements IModel
 	public static function getList($pageIndex=1,$pageSize=20,$urid=0)
 	{
 		$tb = self::db();
+		$tb->select('post.*','user.name');
 		if ($urid > 0) {
 			$tb->where('urid','=',$urid);
 		}
+		$tb->leftJoin('user', function ($join) {
+			$join->on('user.urid', '=', 'post.urid');
+		});
 		return $tb->orderBy('created_at','desc')->forPage($pageIndex,$pageSize)->get();
 	}
 
